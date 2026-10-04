@@ -1,0 +1,8 @@
+# BergBuilds
+
+> Hurtige, flotte hjemmesider til caféer, frisører, håndværkere og foreninger. Fast pris, klar på 1–2 uger.
+
+Hjemmesider til små virksomheder i Odense og på Fyn: caféer, frisører, håndværkere og foreninger. Opstartspris plus et fast beløb om måneden (149, 249 eller 399 kr.), eller køb siden én gang (fra 2.500 kr.). Ingen binding.
+
+- [Forside med priser og eksempler](https://bergbuilds.github.io/)
+- Kontakt: bergbuilds@outlook.dk

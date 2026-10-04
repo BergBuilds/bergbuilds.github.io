@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bergbuilds.github.io/sitemap.xml
