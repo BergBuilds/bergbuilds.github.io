@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pizzeria Fornello · Pizza, durum og burger</title>
+<meta name="description" content="Stenovnspizza, durum og burger til afhentning. Bestil online og spring køen over. (Eksempelside, opdigtet pizzeria.)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root { --red:#d62828; --dark:#1b1b1b; --cream:#fff8ec; --green:#2a9d55; --line:#eadfcf; --dim:#6d6458; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:Inter, system-ui, sans-serif; background:var(--cream); color:var(--dark); line-height:1.5; padding-bottom:90px; }
+  h1, h2 { font-family:"Bebas Neue", Impact, sans-serif; letter-spacing:.02em; font-weight:400; }
+  .demo { background:var(--dark); color:#ffd9a0; text-align:center; font-size:13px; padding:6px; }
+  .wrap { max-width:900px; margin:0 auto; padding:0 16px; }
+  header { background:var(--red); color:#fff; padding:36px 0 28px; background-image:radial-gradient(circle at 85% 30%,#ffffff22 0 90px,transparent 91px),radial-gradient(circle at 92% 70%,#ffffff15 0 50px,transparent 51px); }
+  header h1 { font-size:clamp(48px,9vw,80px); line-height:.9; }
+  header p { opacity:.92; margin:10px 0 16px; max-width:30em; }
+  .chips { display:flex; gap:8px; flex-wrap:wrap; }
+  .chips span { background:#ffffff26; padding:6px 12px; border-radius:99px; font-size:14px; font-weight:600; }
+  .open { background:#ffffff; color:var(--green) !important; }
+  .tabs { position:sticky; top:0; background:var(--cream); z-index:5; display:flex; gap:8px; overflow-x:auto; padding:12px 0; border-bottom:1px solid var(--line); }
+  .tabs a { flex:none; text-decoration:none; color:var(--dark); font-weight:700; padding:8px 14px; border-radius:99px; border:1px solid var(--line); background:#fff; }
+  section { padding:22px 0 6px; scroll-margin-top:60px; }
+  h2 { font-size:38px; color:var(--red); }
+  .item { display:flex; gap:12px; align-items:center; background:#fff; border:1px solid var(--line); border-radius:14px; padding:12px 14px; margin:8px 0; }
+  .item .no { font-family:"Bebas Neue"; font-size:24px; color:var(--red); width:30px; flex:none; }
+  .item .t { flex:1; }
+  .item b { display:block; }
+  .item small { color:var(--dim); }
+  .item .p { font-weight:800; white-space:nowrap; }
+  .add { flex:none; width:38px; height:38px; border-radius:50%; border:0; background:var(--red); color:#fff; font-size:22px; font-weight:800; cursor:pointer; }
+  .add:active { transform:scale(.92); }
+  .qty { color:var(--green); font-weight:800; font-size:13px; }
+  .bar { position:fixed; left:0; right:0; bottom:0; background:var(--dark); color:#fff; padding:12px 16px; display:flex; justify-content:center; }
+  .bar .in { max-width:900px; width:100%; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  .bar button { background:var(--green); color:#fff; border:0; border-radius:12px; padding:13px 20px; font:inherit; font-weight:800; cursor:pointer; }
+  .bar button:disabled { opacity:.4; cursor:default; }
+  .done { display:none; position:fixed; inset:0; background:#000a; z-index:9; align-items:center; justify-content:center; padding:16px; }
+  .done .box { background:#fff; border-radius:18px; padding:26px; max-width:380px; text-align:center; }
+  .done h2 { color:var(--green); }
+  .info { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:26px 0; }
+  .info div { background:#fff; border:1px solid var(--line); border-radius:14px; padding:16px; }
+  @media (max-width:640px) { .info { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="demo">Eksempelside lavet af BergBuilds · Pizzeriaet er opdigtet</div>
+<header>
+  <div class="wrap">
+    <h1>Pizzeria Fornello</h1>
+    <p>Stenovnspizza, durum og burger. Bestil online, så er den klar, når du kommer.</p>
+    <div class="chips"><span class="open" id="open">Åbent nu</span><span>Afhentning 15–20 min</span><span>Tlf. 00 00 00 00</span></div>
+  </div>
+</header>
+<div class="wrap">
+  <nav class="tabs" id="tabs"></nav>
+  <div id="menu"></div>
+  <div class="info">
+    <div><b>Åbningstider</b><br>Alle dage 15–22</div>
+    <div><b>Adresse</b><br>Pizzavej 1, 1234 Byen</div>
+  </div>
+</div>
+<div class="bar"><div class="in"><span id="sum">Kurven er tom</span><button id="order" disabled>Bestil til afhentning</button></div></div>
+<div class="done" id="done"><div class="box"><h2>Tak for din bestilling!</h2><p id="doneText"></p><p style="color:#6d6458;font-size:13px;margin-top:8px">(Eksempel: der bliver ikke bestilt noget.)</p><br><button class="add" style="width:auto;padding:0 18px;border-radius:12px" onclick="document.getElementById('done').style.display='none'">OK</button></div></div>
+<script>
+  const MENU = {
+    'Pizza': [[1, 'Margherita', 'Tomat, ost, basilikum', 79], [2, 'Pepperoni', 'Tomat, ost, pepperoni', 89], [3, 'Hawaii', 'Skinke, ananas', 89],
+              [4, 'Kebab', 'Kebab, løg, dressing', 95], [5, 'Fornello', 'Parmaskinke, rucola, parmesan', 109], [6, 'Vegetar', 'Peberfrugt, champignon, oliven', 89]],
+    'Durum & Pita': [[20, 'Durum kebab', 'Salat, dressing', 75], [21, 'Durum kylling', 'Salat, hvidløgsdressing', 75], [22, 'Pita falafel', 'Hummus, salat', 65]],
+    'Burger': [[30, 'Classic', 'Bøf, cheddar, pickles', 85], [31, 'Crispy chicken', 'Sprød kylling, coleslaw', 85], [32, 'Pommes frites', 'Stor portion', 35]],
+    'Drikke': [[40, 'Sodavand 0,5 l', 'Cola, Fanta, Faxe Kondi', 25], [41, 'Vand 0,5 l', '', 20]],
+  };
+  const cart = {};
+  const menu = document.getElementById('menu'), tabs = document.getElementById('tabs');
+  for (const [cat, items] of Object.entries(MENU)) {
+    const id = cat.replace(/\W+/g, '');
+    tabs.insertAdjacentHTML('beforeend', `<a href="#${id}">${cat}</a>`);
+    menu.insertAdjacentHTML('beforeend', `<section id="${id}"><h2>${cat}</h2>` + items.map(([no, n, d, p]) =>
+      `<div class="item"><span class="no">${no}</span><span class="t"><b>${n}</b><small>${d}</small> <span class="qty" id="q${no}"></span></span><span class="p">${p} kr.</span><button class="add" aria-label="Tilføj ${n}" data-no="${no}">+</button></div>`).join('') + '</section>');
+  }
+  const all = Object.values(MENU).flat();
+  const update = () => {
+    let n = 0, total = 0;
+    for (const [no, q] of Object.entries(cart)) { const it = all.find((x) => x[0] == no); n += q; total += q * it[3]; document.getElementById('q' + no).textContent = q ? `× ${q} i kurven` : ''; }
+    document.getElementById('sum').textContent = n ? `${n} vare${n > 1 ? 'r' : ''} · ${total} kr.` : 'Kurven er tom';
+    document.getElementById('order').disabled = !n;
+  };
+  menu.addEventListener('click', (e) => { const b = e.target.closest('.add'); if (!b) return; cart[b.dataset.no] = (cart[b.dataset.no] || 0) + 1; update(); });
+  document.getElementById('order').onclick = () => {
+    const t = new Date(Date.now() + 20 * 60000).toTimeString().slice(0, 5);
+    document.getElementById('doneText').textContent = `Din mad er klar til afhentning ca. kl. ${t}.`;
+    document.getElementById('done').style.display = 'flex';
+    for (const k in cart) delete cart[k];
+    update();
+  };
+  const h = new Date().getHours();
+  if (h < 15 || h >= 22) { const o = document.getElementById('open'); o.textContent = 'Lukket nu · åbner kl. 15'; o.style.color = '#d62828'; }
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nordvand VVS · Hurtig og fair VVS-hjælp</title>
+<meta name="description" content="VVS-arbejde for private og erhverv: badeværelser, varme, akut hjælp. Få et tilbud i dag. (Eksempelside, opdigtet firma.)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#0b2a5b; --blue:#1e66d0; --sky:#e8f1fd; --orange:#ff7a1a; --text:#0f1b2d; --dim:#5a6b85; --line:#dbe5f3; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:Inter, system-ui, sans-serif; color:var(--text); line-height:1.6; background:#fff; }
+  .wrap { max-width:1040px; margin:0 auto; padding:0 20px; }
+  .demo { background:var(--navy); color:#cfe0ff; text-align:center; font-size:13px; padding:6px; }
+  .top { background:var(--orange); color:#fff; font-weight:600; text-align:center; padding:8px; font-size:15px; }
+  .top a { color:#fff; }
+  nav { display:flex; justify-content:space-between; align-items:center; padding:18px 0; }
+  .logo { font-weight:800; font-size:22px; color:var(--navy); display:flex; align-items:center; gap:10px; }
+  .drop { width:26px; height:26px; background:var(--blue); border-radius:50% 0 50% 50%; transform:rotate(-45deg); }
+  .btn { display:inline-block; background:var(--orange); color:#fff; padding:13px 22px; border-radius:10px; text-decoration:none; font-weight:700; border:0; font:inherit; font-weight:700; cursor:pointer; }
+  .btn.blue { background:var(--blue); }
+  .hero { background:linear-gradient(135deg,var(--navy),var(--blue)); color:#fff; border-radius:22px; padding:56px 40px; display:grid; grid-template-columns:1.1fr .9fr; gap:30px; align-items:center; }
+  .hero h1 { font-size:clamp(34px,5vw,54px); line-height:1.05; letter-spacing:-.02em; }
+  .hero p { color:#cfe0ff; font-size:18px; margin:16px 0 24px; }
+  .ticks { list-style:none; margin-top:20px; }
+  .ticks li { padding:4px 0 4px 28px; position:relative; color:#e6efff; }
+  .ticks li::before { content:""; position:absolute; left:0; top:9px; width:16px; height:9px; border-left:3px solid #7ee2a8; border-bottom:3px solid #7ee2a8; transform:rotate(-45deg); }
+  form { background:#fff; color:var(--text); border-radius:16px; padding:24px; box-shadow:0 20px 40px rgba(0,0,0,.25); }
+  form h3 { margin-bottom:12px; }
+  label { display:block; font-size:13px; font-weight:600; color:var(--dim); margin:10px 0 4px; }
+  input, select, textarea { width:100%; padding:11px 12px; border:1px solid var(--line); border-radius:10px; font:inherit; }
+  textarea { min-height:80px; resize:vertical; }
+  form .btn { width:100%; margin-top:14px; }
+  #sent { color:#15803d; font-weight:600; margin-top:10px; min-height:1.4em; }
+  section { padding:64px 0 10px; }
+  h2 { font-size:34px; letter-spacing:-.02em; margin-bottom:6px; color:var(--navy); }
+  .sub { color:var(--dim); margin-bottom:26px; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .svc { background:var(--sky); border-radius:16px; padding:24px; }
+  .svc .ic { width:46px; height:46px; border-radius:12px; background:var(--blue); margin-bottom:12px; display:grid; place-items:center; color:#fff; font-weight:800; }
+  .svc h3 { margin-bottom:4px; color:var(--navy); }
+  .svc p { color:var(--dim); font-size:15px; }
+  .area { display:flex; flex-wrap:wrap; gap:8px; }
+  .area span { background:var(--sky); color:var(--navy); padding:8px 14px; border-radius:99px; font-weight:600; font-size:14px; }
+  .cta { margin:64px 0 0; background:var(--navy); color:#fff; border-radius:22px; padding:40px; display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; }
+  .cta h2 { color:#fff; margin:0; }
+  footer { text-align:center; color:var(--dim); padding:40px 0; font-size:14px; }
+  @media (max-width:820px) { .hero { grid-template-columns:1fr; padding:36px 22px; } .grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="demo">Eksempelside lavet af BergBuilds · Firmaet er opdigtet</div>
+<div class="top">Akut vandskade? Ring døgnet rundt: <a href="tel:+4500000000">00 00 00 00</a></div>
+<div class="wrap">
+  <nav><div class="logo"><span class="drop"></span>Nordvand VVS</div><a class="btn blue" href="tel:+4500000000">Ring nu</a></nav>
+  <div class="hero">
+    <div>
+      <h1>VVS-hjælp, der kommer, når vi siger det.</h1>
+      <p>Badeværelser, varme, utætheder og akutte skader. Fast pris på opgaven, før vi går i gang.</p>
+      <ul class="ticks"><li>Tilbud inden for 24 timer</li><li>Autoriseret VVS-installatør</li><li>Vi rydder op efter os</li></ul>
+    </div>
+    <form id="quote">
+      <h3>Få et gratis tilbud</h3>
+      <label for="n">Navn</label><input id="n" required>
+      <label for="p">Telefon</label><input id="p" type="tel" required>
+      <label for="t">Hvad drejer det sig om?</label>
+      <select id="t"><option>Nyt badeværelse</option><option>Varme / fjernvarme</option><option>Utæthed eller stop</option><option>Andet</option></select>
+      <label for="d">Kort beskrivelse</label><textarea id="d"></textarea>
+      <button class="btn" type="submit">Send forespørgsel</button>
+      <p id="sent"></p>
+    </form>
+  </div>
+
+  <section>
+    <h2>Det hjælper vi med</h2>
+    <p class="sub">Til private, boligforeninger og erhverv.</p>
+    <div class="grid">
+      <div class="svc"><div class="ic">B</div><h3>Badeværelser</h3><p>Fra et nyt toilet til en totalrenovering, i samarbejde med murer og elektriker.</p></div>
+      <div class="svc"><div class="ic">V</div><h3>Varme</h3><p>Radiatorer, gulvvarme, varmepumper og fjernvarmeunits. Service og udskiftning.</p></div>
+      <div class="svc"><div class="ic">A</div><h3>Akut hjælp</h3><p>Sprængte rør, stop i afløb og vandskader. Vi kommer hurtigt, også i weekenden.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Her kører vi</h2>
+    <p class="sub">Ingen kørselstillæg inden for området.</p>
+    <div class="area"><span>Byen</span><span>Nordby</span><span>Sydstrand</span><span>Vestermark</span><span>Østerhavn</span><span>+ omegn</span></div>
+  </section>
+
+  <div class="cta"><h2>Klar til at komme i gang?</h2><a class="btn" href="#quote">Få et tilbud</a></div>
+  <footer>Nordvand VVS ApS · CVR 00000000 · Vandvej 3, 1234 Byen</footer>
+</div>
+<script>
+  document.getElementById('quote').addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('sent').textContent = 'Tak! Vi ringer inden for 24 timer. (Eksempel: der bliver ikke sendt noget.)';
+  });
+</script>
+</body>
+</html>

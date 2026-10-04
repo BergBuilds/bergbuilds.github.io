@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BergBuilds · Hjemmesider og små apps til små virksomheder</title>
+<meta name="description" content="Hurtige, flotte hjemmesider til caféer, frisører, håndværkere og foreninger. Fast pris, klar på 1–2 uger.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0f1020; --card:#181a30; --line:#2a2d4a; --text:#eef0ff; --dim:#a9acd0; --accent:#7c6cff; --accent2:#22d3ee; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:Inter, system-ui, sans-serif; background:var(--bg); color:var(--text); line-height:1.55; }
+  a { color:inherit; }
+  .wrap { max-width:1060px; margin:0 auto; padding:0 20px; }
+  nav { display:flex; justify-content:space-between; align-items:center; padding:20px 0; }
+  .logo { font-weight:800; font-size:20px; letter-spacing:-.02em; }
+  .logo span { color:var(--accent); }
+  .btn { display:inline-block; background:var(--accent); color:#fff; font-weight:600; padding:12px 22px; border-radius:12px; text-decoration:none; }
+  .btn.ghost { background:transparent; border:1px solid var(--line); }
+  .cta-row { display:flex; gap:10px; flex-wrap:wrap; }
+  header { padding:56px 0 72px; display:grid; grid-template-columns:1.2fr .8fr; gap:32px; align-items:center; }
+  h1 { font-size:clamp(34px,5vw,56px); line-height:1.08; letter-spacing:-.03em; font-weight:800; }
+  h1 em { font-style:normal; background:linear-gradient(90deg,var(--accent),var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .lead { color:var(--dim); font-size:19px; margin:18px 0 28px; max-width:34em; }
+  .hero-icons { position:relative; height:300px; }
+  .hero-icons img { position:absolute; width:130px; filter:drop-shadow(0 18px 30px rgba(0,0,0,.45)); animation:float 6s ease-in-out infinite; }
+  .hero-icons img:nth-child(1) { left:10%; top:0; }
+  .hero-icons img:nth-child(2) { right:6%; top:60px; animation-delay:-2s; width:110px; }
+  .hero-icons img:nth-child(3) { left:30%; top:160px; animation-delay:-4s; width:120px; }
+  @keyframes float { 50% { transform:translateY(-12px); } }
+  @media (prefers-reduced-motion:reduce) { .hero-icons img { animation:none; } }
+  section { padding:56px 0; border-top:1px solid var(--line); }
+  h2 { font-size:32px; letter-spacing:-.02em; margin-bottom:8px; }
+  .sub { color:var(--dim); margin-bottom:28px; }
+  .grid { display:grid; gap:18px; grid-template-columns:repeat(3,1fr); }
+  .demos .grid { grid-template-columns:repeat(2,1fr); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:24px; }
+  .card img { width:56px; margin-bottom:10px; }
+  .card h3 { font-size:19px; margin-bottom:6px; }
+  .card p, .card li { color:var(--dim); font-size:15px; }
+  .price { font-size:34px; font-weight:800; margin:6px 0 2px; }
+  .price small { font-size:15px; color:var(--dim); font-weight:600; }
+  .card ul { list-style:none; margin-top:12px; }
+  .card li { padding:5px 0 5px 24px; position:relative; }
+  .card li::before { content:""; position:absolute; left:0; top:11px; width:12px; height:12px; border-radius:4px; background:var(--accent2); opacity:.8; }
+  .card.pop { border-color:var(--accent); box-shadow:0 0 0 1px var(--accent) inset; }
+  .tag { display:inline-block; font-size:12px; font-weight:700; color:#fff; background:var(--accent); border-radius:99px; padding:3px 10px; margin-bottom:8px; }
+  .demos a.card { text-decoration:none; transition:transform .15s; display:block; }
+  .demos a.card:hover { transform:translateY(-3px); }
+  .swatch { height:120px; border-radius:12px; margin-bottom:14px; }
+  .steps { counter-reset:s; }
+  .steps .card h3::before { counter-increment:s; content:counter(s); display:inline-grid; place-items:center; width:30px; height:30px; border-radius:50%; background:var(--accent); margin-right:10px; font-size:15px; }
+  .faq details { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 20px; margin-bottom:10px; }
+  .faq summary { font-weight:600; cursor:pointer; }
+  .faq p { color:var(--dim); margin-top:8px; }
+  .contact { text-align:center; padding:72px 0; }
+  footer { color:var(--dim); font-size:14px; text-align:center; padding:28px 0 40px; border-top:1px solid var(--line); }
+  @media (max-width:820px) { header { grid-template-columns:1fr; } .hero-icons { height:200px; } .hero-icons img { width:90px !important; } .grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <div class="logo">Berg<span>Builds</span></div>
+    <a class="btn ghost" href="#kontakt">Få et tilbud</a>
+  </nav>
+
+  <header>
+    <div>
+      <h1>En hjemmeside, der <em>får kunder ind ad døren</em>.</h1>
+      <p class="lead">Jeg laver hurtige, flotte hjemmesider og små smarte værktøjer til caféer, frisører, håndværkere og foreninger. Fast pris, ingen binding, og den er klar på 1–2 uger.</p>
+      <div class="cta-row"><a class="btn" href="#priser">Se priser</a><a class="btn ghost" href="#eksempler">Se eksempler</a></div>
+    </div>
+    <div class="hero-icons" aria-hidden="true">
+      <img src="img/rocket.png" alt=""><img src="img/phone.png" alt=""><img src="img/chat.png" alt="">
+    </div>
+  </header>
+
+  <section>
+    <h2>Det får du</h2>
+    <p class="sub">Alt det, en lille virksomhed faktisk har brug for, og ikke mere.</p>
+    <div class="grid">
+      <div class="card"><img src="img/phone.png" alt=""><h3>Ser godt ud på mobilen</h3><p>De fleste finder dig på telefonen. Siden er bygget til den først.</p></div>
+      <div class="card"><img src="img/bolt.png" alt=""><h3>Lynhurtig</h3><p>Ingen tunge skabeloner. Siden åbner med det samme, og Google kan lide det.</p></div>
+      <div class="card"><img src="img/chart.png" alt=""><h3>Til at finde på Google</h3><p>Rigtige titler, beskrivelser og din Google Business-profil sat ordentligt op.</p></div>
+      <div class="card"><img src="img/calendar.png" alt=""><h3>Åbningstider, menu, booking</h3><p>Det, kunderne leder efter, står øverst. Booking og bestilling kan kobles på.</p></div>
+      <div class="card"><img src="img/settings.png" alt=""><h3>Små automatiseringer</h3><p>Slip for gentagne opgaver: Excel-ark, bestillinger, påmindelser og rapporter.</p></div>
+      <div class="card"><img src="img/check.png" alt=""><h3>Fast pris</h3><p>Du får prisen på forhånd. Ingen timer, der løber, og ingen overraskelser.</p></div>
+    </div>
+  </section>
+
+  <section id="priser">
+    <h2>Priser</h2>
+    <p class="sub">En lille opstartspris og et fast beløb om måneden. Så kører siden, bliver opdateret og er altid online, uden at du skal tænke over det. Ingen binding: siden og domænet er dine.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Start</h3>
+        <div class="price">149 kr.<small>/md.</small></div>
+        <p>+ 1.500 kr. i opstart · én side med det hele</p>
+        <ul><li>Forside med åbningstider, kontakt og kort</li><li>Mobilvenlig, hurtig og sikker (HTTPS)</li><li>Hosting og backup</li><li>1 lille ændring om måneden</li><li>Opsig når som helst</li></ul>
+      </div>
+      <div class="card pop">
+        <span class="tag">Mest valgt</span>
+        <h3>Standard</h3>
+        <div class="price">249 kr.<small>/md.</small></div>
+        <p>+ 3.000 kr. i opstart · op til 5 sider</p>
+        <ul><li>Alt fra Start</li><li>Menu, prisliste eller ydelser</li><li>Galleri med dine billeder</li><li>Google Business-profil sat op</li><li>2 ændringer om måneden</li></ul>
+      </div>
+      <div class="card">
+        <h3>Plus</h3>
+        <div class="price">399 kr.<small>/md.</small></div>
+        <p>+ fra 5.000 kr. i opstart · når du skal mere</p>
+        <ul><li>Alt fra Standard</li><li>Online booking eller bestilling</li><li>Flere sprog</li><li>Små værktøjer og automatiseringer</li><li>Efter aftale</li></ul>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:18px">Vil du hellere eje den med det samme? Køb siden for 2.500 / 5.000 / fra 8.000 kr., én gang, og hos dig selv bagefter (ændringer 300 kr. pr. stk.). Til sammenligning tager bureauer i Odense typisk 5.000–15.000 kr. plus et månedligt gebyr.</p>
+  </section>
+
+  <section id="eksempler" class="demos">
+    <h2>Eksempler</h2>
+    <p class="sub">Eksempler på, hvordan en side kan se ud. Virksomhederne er opdigtede.</p>
+    <div class="grid">
+      <a class="card" href="demos/cafe/index.html"><div class="swatch" style="background:linear-gradient(135deg,#f6e7d2,#c98a4b)"></div><h3>Café</h3><p>Menu, åbningstider og kort, med varm stemning.</p></a>
+      <a class="card" href="demos/salon/index.html"><div class="swatch" style="background:linear-gradient(135deg,#1c1c1c,#d4a373)"></div><h3>Frisør</h3><p>Prisliste, team og en tydelig "Book tid"-knap.</p></a>
+      <a class="card" href="demos/vvs/index.html"><div class="swatch" style="background:linear-gradient(135deg,#0b3d91,#38bdf8)"></div><h3>Håndværker</h3><p>Ydelser, område og en hurtig "Få et tilbud"-formular.</p></a>
+      <a class="card" href="demos/pizza/index.html"><div class="swatch" style="background:linear-gradient(135deg,#d62828,#ffb703)"></div><h3>Pizzeria / take-away</h3><p>Menukort med bestilling til afhentning, lige fra mobilen.</p></a>
+    </div>
+  </section>
+
+  <section class="steps">
+    <h2>Sådan foregår det</h2>
+    <p class="sub">Fra første snak til færdig side på 1–2 uger.</p>
+    <div class="grid">
+      <div class="card"><h3>En kort snak</h3><p>Vi tager 15 minutter om, hvad du har brug for. Du får en fast pris bagefter.</p></div>
+      <div class="card"><h3>Jeg bygger</h3><p>Du sender tekst og billeder (eller jeg hjælper). Du ser et udkast inden for en uge.</p></div>
+      <div class="card"><h3>Online</h3><p>Vi retter til, og siden går live på dit domæne. Du betaler, når du er tilfreds.</p></div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Spørgsmål</h2>
+    <p class="sub">&nbsp;</p>
+    <details><summary>Hvad koster det at have siden kørende?</summary><p>Med en pakke er hosting, backup og små rettelser med i månedsprisen. Domænet (ca. 100 kr. om året) står i dit navn. Køber du siden, betaler du kun for domænet.</p></details>
+    <details><summary>Kan jeg selv rette i teksten?</summary><p>Ja, hvis du vil. Ellers sender du bare en besked, så retter jeg.</p></details>
+    <details><summary>Jeg har allerede en side. Kan du gøre den bedre?</summary><p>Ja. Ofte er det hurtigere og billigere at lave en ny, enkel side end at lappe på en gammel.</p></details>
+    <details><summary>Hvad med billeder?</summary><p>Dine egne billeder er bedst. Ellers bruger vi gratis billeder i høj kvalitet.</p></details>
+  </section>
+
+  <section class="contact" id="kontakt">
+    <h2>Skal vi tage en snak?</h2>
+    <p class="sub">Skriv et par ord om din virksomhed, så vender jeg tilbage inden for et døgn.</p>
+    <a class="btn" href="mailto:bergbuilds@outlook.dk?subject=Hjemmeside">Skriv til mig</a>
+  </section>
+</div>
+<footer>BergBuilds · Hjemmesider og små apps · Ikonerne er mine egne</footer>
+</body>
+</html>

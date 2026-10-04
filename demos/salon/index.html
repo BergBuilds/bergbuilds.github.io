@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salon Saks · Frisør</title>
+<meta name="description" content="Klip, farve og skæg. Book tid online. (Eksempelside, opdigtet salon.)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#111; --panel:#1a1a1a; --line:#2c2c2c; --gold:#d4a373; --text:#f3eee8; --dim:#a8a19a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:Inter, system-ui, sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+  h1, h2, h3 { font-family:"Playfair Display", Georgia, serif; }
+  .wrap { max-width:1000px; margin:0 auto; padding:0 20px; }
+  .demo { background:var(--gold); color:#111; text-align:center; font-size:13px; padding:6px; }
+  nav { display:flex; justify-content:space-between; align-items:center; padding:20px 0; }
+  .logo { font-family:"Playfair Display", serif; font-weight:800; font-size:26px; letter-spacing:.04em; }
+  .logo span { color:var(--gold); }
+  .btn { display:inline-block; background:var(--gold); color:#111; padding:13px 24px; border-radius:4px; text-decoration:none; font-weight:600; letter-spacing:.03em; }
+  .btn.out { background:transparent; color:var(--text); border:1px solid var(--line); }
+  .hero { min-height:440px; display:flex; flex-direction:column; justify-content:center; padding:40px 0;
+          background:radial-gradient(circle at 80% 40%, rgba(212,163,115,.25), transparent 55%); position:relative; }
+  .hero h1 { font-size:clamp(40px,7vw,78px); line-height:1; max-width:9em; }
+  .hero h1 em { color:var(--gold); font-style:italic; }
+  .hero p { color:var(--dim); font-size:18px; max-width:30em; margin:18px 0 28px; }
+  .scissors { position:absolute; right:4%; top:50%; width:200px; height:200px; transform:translateY(-50%) rotate(-30deg); opacity:.9; }
+  .scissors i { position:absolute; width:140px; height:16px; background:linear-gradient(90deg,#e8e8e8,#9a9a9a); border-radius:8px 40px 40px 8px; left:60px; top:92px; transform-origin:0 50%; }
+  .scissors i:nth-child(1) { transform:rotate(14deg); } .scissors i:nth-child(2) { transform:rotate(-14deg); }
+  .scissors b { position:absolute; width:56px; height:56px; border:10px solid var(--gold); border-radius:50%; left:6px; }
+  .scissors b:nth-of-type(1) { top:30px; } .scissors b:nth-of-type(2) { top:114px; }
+  section { padding:64px 0 20px; border-top:1px solid var(--line); }
+  h2 { font-size:40px; margin-bottom:6px; }
+  .sub { color:var(--dim); margin-bottom:28px; }
+  .prices { display:grid; grid-template-columns:1fr 1fr; gap:10px 48px; }
+  .row { display:flex; justify-content:space-between; align-items:baseline; gap:10px; padding:10px 0; border-bottom:1px solid var(--line); }
+  .row span small { display:block; color:var(--dim); font-size:13px; }
+  .row b { color:var(--gold); white-space:nowrap; }
+  .team { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .person { background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:22px; text-align:center; }
+  .avatar { width:96px; height:96px; border-radius:50%; margin:0 auto 12px; display:grid; place-items:center; font-family:"Playfair Display", serif; font-size:34px; font-weight:800; color:#111; }
+  .person p { color:var(--dim); font-size:14px; }
+  .book { text-align:center; background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:48px 24px; margin:64px 0 0; }
+  .slots { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:22px 0; }
+  .slots button { background:transparent; color:var(--text); border:1px solid var(--line); padding:10px 16px; border-radius:4px; font:inherit; cursor:pointer; }
+  .slots button.on { background:var(--gold); color:#111; border-color:var(--gold); }
+  .slots button:disabled { opacity:.3; cursor:default; text-decoration:line-through; }
+  #msg { color:var(--gold); min-height:1.6em; }
+  footer { text-align:center; color:var(--dim); padding:40px 0; font-size:14px; }
+  @media (max-width:780px) { .prices, .team { grid-template-columns:1fr; } .scissors { display:none; } }
+</style>
+</head>
+<body>
+<div class="demo">Eksempelside lavet af BergBuilds · Salonen er opdigtet</div>
+<div class="wrap">
+  <nav><div class="logo">SALON <span>SAKS</span></div><a class="btn" href="#book">Book tid</a></nav>
+  <div class="hero">
+    <h1>Et godt klip gør <em>hele</em> ugen bedre.</h1>
+    <p>Klip, farve og skæg i en rolig salon. Book online på 30 sekunder, også om aftenen.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="#book">Book tid</a><a class="btn out" href="#priser">Se priser</a></div>
+    <div class="scissors" aria-hidden="true"><i></i><i></i><b></b><b></b></div>
+  </div>
+
+  <section id="priser">
+    <h2>Priser</h2>
+    <p class="sub">Studerende og pensionister: 10 % rabat på alle klip.</p>
+    <div class="prices">
+      <div class="row"><span>Herreklip</span><b>350 kr.</b></div>
+      <div class="row"><span>Dameklip<small>Inkl. vask og føn</small></span><b>495 kr.</b></div>
+      <div class="row"><span>Børneklip<small>Under 12 år</small></span><b>250 kr.</b></div>
+      <div class="row"><span>Skægtrim</span><b>175 kr.</b></div>
+      <div class="row"><span>Klip + skæg</span><b>475 kr.</b></div>
+      <div class="row"><span>Farve<small>Kort / langt hår</small></span><b>fra 795 kr.</b></div>
+      <div class="row"><span>Striber / balayage</span><b>fra 1.195 kr.</b></div>
+      <div class="row"><span>Bryn og vipper</span><b>195 kr.</b></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Holdet</h2>
+    <p class="sub">Vælg din frisør, når du booker.</p>
+    <div class="team">
+      <div class="person"><div class="avatar" style="background:#d4a373">M</div><h3>Maja</h3><p>Farve og balayage</p></div>
+      <div class="person"><div class="avatar" style="background:#b5838d">A</div><h3>Ali</h3><p>Herreklip og skæg</p></div>
+      <div class="person"><div class="avatar" style="background:#a3b18a">S</div><h3>Sofie</h3><p>Dameklip og opsætning</p></div>
+    </div>
+  </section>
+
+  <div class="book" id="book">
+    <h2>Book tid</h2>
+    <p class="sub" style="margin:0">Ledige tider i morgen. (I en rigtig side kobles den på dit bookingsystem.)</p>
+    <div class="slots" id="slots"></div>
+    <p id="msg"></p>
+  </div>
+  <footer>Salon Saks · Saksgade 2, 1234 Byen · Man–fre 9–19, lør 9–15</footer>
+</div>
+<script>
+  const taken = ['10:00', '13:30'];
+  const box = document.getElementById('slots'), msg = document.getElementById('msg');
+  ['9:00', '10:00', '11:30', '13:30', '15:00', '16:30', '18:00'].forEach((t) => {
+    const b = document.createElement('button');
+    b.textContent = t;
+    b.disabled = taken.includes(t);
+    b.onclick = () => {
+      box.querySelectorAll('button').forEach((x) => x.classList.remove('on'));
+      b.classList.add('on');
+      msg.textContent = `Kl. ${t} i morgen er valgt. (Eksempel: der bliver ikke booket noget.)`;
+    };
+    box.appendChild(b);
+  });
+</script>
+</body>
+</html>

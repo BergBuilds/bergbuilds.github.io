@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café Solsikke · Kaffe, brunch og kage</title>
+<meta name="description" content="Hyggelig café med kaffe fra egen rister, brunch hele dagen og hjemmebag. (Eksempelside, opdigtet café.)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root { --cream:#fbf4ea; --paper:#f4e6d2; --brown:#4a2c17; --caramel:#c98a4b; --sun:#f2b632; --text:#2e1d10; --dim:#7a5c44; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:Inter, system-ui, sans-serif; background:var(--cream); color:var(--text); line-height:1.6; }
+  h1, h2, h3 { font-family:Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .wrap { max-width:1000px; margin:0 auto; padding:0 20px; }
+  .demo { background:var(--brown); color:#f4e6d2; text-align:center; font-size:13px; padding:6px; }
+  nav { display:flex; justify-content:space-between; align-items:center; padding:18px 0; }
+  .logo { font-family:Fraunces, serif; font-weight:800; font-size:24px; color:var(--brown); display:flex; align-items:center; gap:10px; }
+  .sunflower { width:34px; height:34px; border-radius:50%; background:radial-gradient(circle,#5a3a1c 0 34%,var(--sun) 36% 100%); box-shadow:0 0 0 4px #f8d47a; }
+  nav a { color:var(--brown); text-decoration:none; font-weight:600; margin-left:18px; }
+  .hero { background:linear-gradient(135deg,#f6e2c4,#e9bf8a); border-radius:28px; padding:64px 40px; display:grid; grid-template-columns:1.1fr .9fr; gap:24px; align-items:center; overflow:hidden; }
+  .hero h1 { font-size:clamp(38px,6vw,64px); line-height:1.02; color:var(--brown); }
+  .hero p { font-size:18px; color:var(--dim); margin:16px 0 24px; }
+  .btn { display:inline-block; background:var(--brown); color:#fff; padding:13px 22px; border-radius:99px; text-decoration:none; font-weight:600; }
+  .btn.light { background:#fff; color:var(--brown); }
+  .cup { position:relative; height:260px; }
+  .cup .mug { position:absolute; left:50%; bottom:20px; width:170px; height:150px; transform:translateX(-50%); background:#fff; border-radius:0 0 70px 70px; box-shadow:0 20px 40px rgba(74,44,23,.25); }
+  .cup .mug::after { content:""; position:absolute; right:-46px; top:28px; width:56px; height:64px; border:14px solid #fff; border-radius:50%; }
+  .cup .coffee { position:absolute; left:50%; bottom:156px; width:170px; height:26px; transform:translateX(-50%); background:#6f4423; border-radius:50%; border:6px solid #fff; }
+  .steam { position:absolute; left:50%; bottom:190px; width:14px; height:60px; border-radius:99px; background:rgba(255,255,255,.7); animation:rise 3s ease-in-out infinite; }
+  .steam:nth-child(4) { margin-left:-36px; animation-delay:-1s; } .steam:nth-child(5) { margin-left:30px; animation-delay:-2s; }
+  @keyframes rise { 0% { opacity:0; transform:translateY(10px) scaleY(.6); } 50% { opacity:1; } 100% { opacity:0; transform:translateY(-30px) scaleY(1.1); } }
+  @media (prefers-reduced-motion:reduce) { .steam { animation:none; opacity:.6; } }
+  section { padding:60px 0 10px; }
+  h2 { font-size:38px; color:var(--brown); margin-bottom:6px; }
+  .sub { color:var(--dim); margin-bottom:24px; }
+  .menu { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .menu .col { background:#fff; border-radius:20px; padding:24px; box-shadow:0 4px 0 var(--paper); }
+  .menu h3 { font-size:22px; margin-bottom:10px; color:var(--caramel); }
+  .item { display:flex; justify-content:space-between; gap:12px; padding:8px 0; border-bottom:1px dashed #ead8bf; }
+  .item:last-child { border:0; }
+  .item small { display:block; color:var(--dim); font-size:13px; }
+  .item b { white-space:nowrap; }
+  .info { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .box { background:var(--paper); border-radius:20px; padding:26px; }
+  table { width:100%; border-collapse:collapse; }
+  td { padding:6px 0; border-bottom:1px solid #e6d2b6; }
+  td:last-child { text-align:right; font-weight:600; }
+  tr.today td { color:var(--caramel); }
+  .map { height:220px; border-radius:14px; margin-top:12px; background:
+      linear-gradient(90deg,transparent 48%,#fff 48% 52%,transparent 52%),
+      linear-gradient(0deg,transparent 58%,#fff 58% 62%,transparent 62%),
+      linear-gradient(135deg,#d9e8c8,#c4dcae); position:relative; }
+  .map::after { content:""; position:absolute; left:calc(50% - 14px); top:calc(60% - 38px); width:28px; height:28px; background:#d6452f; border-radius:50% 50% 50% 0; transform:rotate(-45deg); box-shadow:0 6px 10px rgba(0,0,0,.2); }
+  footer { text-align:center; color:var(--dim); padding:50px 0 40px; font-size:14px; }
+  @media (max-width:780px) { .hero { grid-template-columns:1fr; padding:40px 24px; } .menu, .info { grid-template-columns:1fr; } nav a:not(.btn) { display:none; } }
+</style>
+</head>
+<body>
+<div class="demo">Eksempelside lavet af BergBuilds · Caféen er opdigtet</div>
+<div class="wrap">
+  <nav>
+    <div class="logo"><span class="sunflower"></span>Café Solsikke</div>
+    <div><a href="#menu">Menu</a><a href="#find">Find os</a></div>
+  </nav>
+  <div class="hero">
+    <div>
+      <h1>Kaffe, brunch og kage, hele dagen.</h1>
+      <p>Kaffe fra en lokal rister, brød fra egen ovn og brunch til kl. 15. Kom ind og varm dig.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="#menu">Se menuen</a><a class="btn light" href="tel:+4500000000">Bestil bord</a></div>
+    </div>
+    <div class="cup" aria-hidden="true"><div class="coffee"></div><div class="mug"></div><div class="steam"></div><div class="steam"></div><div class="steam"></div></div>
+  </div>
+
+  <section id="menu">
+    <h2>Menu</h2>
+    <p class="sub">Alt bages og laves her hver morgen.</p>
+    <div class="menu">
+      <div class="col"><h3>Kaffe</h3>
+        <div class="item"><span>Espresso</span><b>30 kr.</b></div>
+        <div class="item"><span>Cappuccino<small>Havremælk uden ekstra pris</small></span><b>42 kr.</b></div>
+        <div class="item"><span>Flat white</span><b>44 kr.</b></div>
+        <div class="item"><span>Filterkaffe<small>Fri påfyldning</small></span><b>32 kr.</b></div>
+        <div class="item"><span>Chai latte</span><b>45 kr.</b></div>
+      </div>
+      <div class="col"><h3>Brunch</h3>
+        <div class="item"><span>Lille brunch<small>Æg, yoghurt, brød, ost</small></span><b>95 kr.</b></div>
+        <div class="item"><span>Stor brunch<small>+ pandekager og frugt</small></span><b>145 kr.</b></div>
+        <div class="item"><span>Avocadotoast<small>Surdej, chili, citron</small></span><b>89 kr.</b></div>
+        <div class="item"><span>Granola-skål</span><b>65 kr.</b></div>
+      </div>
+      <div class="col"><h3>Kage</h3>
+        <div class="item"><span>Kanelsnegl</span><b>32 kr.</b></div>
+        <div class="item"><span>Gulerodskage</span><b>45 kr.</b></div>
+        <div class="item"><span>Brownie<small>Glutenfri</small></span><b>38 kr.</b></div>
+        <div class="item"><span>Dagens kage<small>Spørg ved disken</small></span><b>45 kr.</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="find">
+    <h2>Find os</h2>
+    <p class="sub">Midt i byen, 2 minutter fra stationen.</p>
+    <div class="info">
+      <div class="box">
+        <h3 style="margin-bottom:10px">Åbningstider</h3>
+        <table id="hours">
+          <tr><td>Mandag</td><td>7–17</td></tr><tr><td>Tirsdag</td><td>7–17</td></tr><tr><td>Onsdag</td><td>7–17</td></tr>
+          <tr><td>Torsdag</td><td>7–18</td></tr><tr><td>Fredag</td><td>7–18</td></tr><tr><td>Lørdag</td><td>8–17</td></tr><tr><td>Søndag</td><td>9–16</td></tr>
+        </table>
+      </div>
+      <div class="box">
+        <h3>Adresse</h3>
+        <p>Solsikkevej 1, 1234 Byen<br>Tlf. 00 00 00 00 · hej@cafe-solsikke.dk</p>
+        <div class="map" role="img" aria-label="Kort"></div>
+      </div>
+    </div>
+  </section>
+  <footer>© Café Solsikke · Følg os på Instagram</footer>
+</div>
+<script>
+  // highlight today's opening hours
+  const rows = document.querySelectorAll('#hours tr');
+  const i = (new Date().getDay() + 6) % 7;
+  if (rows[i]) rows[i].classList.add('today');
+</script>
+</body>
+</html>
