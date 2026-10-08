@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bergbuilds.github.io/sitemap.xml
+Sitemap: https://bergbuilds.dk/sitemap.xml
