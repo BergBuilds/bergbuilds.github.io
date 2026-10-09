@@ -166,6 +166,8 @@ footer nav { position:static; background:none; border:0; backdrop-filter:none; d
   .links { display:none; } .hero { grid-template-columns:1fr; } .stats { grid-template-columns:repeat(2,1fr); }
   .me { min-height:360px; } .more { grid-template-columns:1fr; } .chip { font-size:12px; }
 }
-@media (max-width:520px) { .tiles { grid-template-columns:1fr 1fr; gap:12px; } .tile .pic { height:130px; } .tile h3 { font-size:17px; } .tile p { display:none; } .chip.c2 { right:0; } }
+@media (max-width:520px) { .tiles { grid-template-columns:1fr 1fr; gap:12px; } .tile .pic { height:130px; } .tile h3 { font-size:17px; } .tile p { display:none; } .chip.c2 { right:0; } .navr .lbl-l { display:none; } }
+.navr .lbl-s { display:none; }
+@media (max-width:520px) { .navr .lbl-s { display:inline; } }
 @media (prefers-reduced-motion:reduce) { *, *::before, *::after { animation:none !important; transition:none !important; }
   .fade, .w, .tile, .card li { opacity:1 !important; transform:none !important; top:0 !important; left:0 !important; } .grad::after { transform:none !important; } .specks { display:none; } }
