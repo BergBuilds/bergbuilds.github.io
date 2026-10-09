@@ -76,7 +76,7 @@
 
   // checklists tick off one by one; cards in a row come in one after another
   document.querySelectorAll('.card ul').forEach((ul) => ul.querySelectorAll('li').forEach((li, i) => li.style.setProperty('--i', i)));
-  document.querySelectorAll('.bento, .prices, .steps, .apps').forEach((g) => g.querySelectorAll(':scope > .fade').forEach((c, i) => c.style.setProperty('--d', i)));
+  document.querySelectorAll('.bento, .prices, .steps, .apps, .tiles, .trades, .more').forEach((g) => g.querySelectorAll(':scope > .fade').forEach((c, i) => c.style.setProperty('--d', i)));
 
   const io = new IntersectionObserver((es) => es.forEach((e) => {
     if (!e.isIntersecting) return;
