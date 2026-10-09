@@ -243,6 +243,7 @@ a.card:hover { border-color:rgba(169,156,255,.35); }
 .prose { max-width:46em; color:var(--dim); font-size:17px; } .prose p + p { margin-top:14px; } .prose b { color:var(--text); }
 .checks ul { list-style:none; } .checks li { padding:10px 0 10px 34px; position:relative; border-bottom:1px solid var(--line); }
 .checks li:last-child { border-bottom:0; }
+.checks ol { list-style:none; } .checks ol li::before { content:attr(data-n); }  /* numbered checklist: the number takes the tick's place */
 .checks li::before { content:"✓"; position:absolute; left:0; top:10px; width:22px; height:22px; border-radius:50%; display:grid; place-items:center; font-size:12px; font-weight:800;
                      color:#0b0c12; background:linear-gradient(135deg,#a99cff,#22d3ee); }
 .checks li b { color:var(--text); }
