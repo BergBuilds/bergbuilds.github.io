@@ -25,6 +25,7 @@ Kontakt: bergbuilds@outlook.dk · YouTube: https://www.youtube.com/@BergBuilds �
 - [SEO-tjekliste: 31 ting din hjemmeside skal have · BergBuilds](https://bergbuilds.dk/hjemmesider/seo-tjekliste/): Gratis SEO-tjekliste til små virksomheder: 31 ting, der gør din hjemmeside nem at finde på Google og i AI-søgning som ChatGPT. Forklaret uden fagsprog.
 
 ## Projekter
+- [Arcmode: Winter arc-dashboard for dine vaner · BergBuilds](https://bergbuilds.dk/arcmode/): Arcmode samler hele din winter arc på ét glødende dashboard: daglige vaner fra en indbygget guide, træning fra Reppr og mad fra Nibblr, i én konsistens-score helt frem til nytår. Den kommer snart i en lukket test på Google Play.
 - [ArtKit: Blender-pipeline til spilgrafik · BergBuilds](https://bergbuilds.dk/artkit/): ArtKit er BergBuilds' egen Blender-pipeline: den bygger og renderer ikoner, sprites og figurer med kode, så spillene og asset packs kan få ensartet grafik hurtigt.
 - [Asset packs: 3D-ikoner til spiludviklere · BergBuilds](https://bergbuilds.dk/asset-packs/): Fire pakker med 253 ikoner i alt, renderet i 3D og klar til brug i spil. De sælges på itch.io.
 - [Casino de Chambre: Festkasino til en tour de chambre · BergBuilds](https://bergbuilds.dk/casino-de-chambre/): Casino de Chambre er et festkasino til en tour de chambre: holdene deler en telefon, scanner en QR-kode og spiller mod huset med jetoner, mens en storskærm viser stillingen live.
@@ -43,6 +44,7 @@ Kontakt: bergbuilds@outlook.dk · YouTube: https://www.youtube.com/@BergBuilds �
 - [Zeta: Automatisk videoredigering · BergBuilds](https://bergbuilds.dk/zeta/): Zeta er en videoredigering, der klipper selv ud fra et manus: undertekster, musik, takter og grafik. Den laver BergBuilds' devlogs og app-reklamer, og den kører helt lokalt på pc'en.
 
 ## Projects (English)
+- [Arcmode: Winter arc dashboard for your habits · BergBuilds](https://bergbuilds.dk/en/arcmode/): Arcmode puts your whole winter arc on one glowing dashboard: daily habits from a built-in guide, workouts from Reppr and food from Nibblr, in one consistency score all the way to New Year. A closed test on Google Play is coming soon.
 - [ArtKit: Blender pipeline for game art · BergBuilds](https://bergbuilds.dk/en/artkit/): ArtKit is BergBuilds' own Blender pipeline: it builds and renders icons, sprites and models with code, so the games and asset packs get consistent art fast.
 - [Asset packs: 3D icons for game developers · BergBuilds](https://bergbuilds.dk/en/asset-packs/): Four packs with 253 icons in total, rendered in 3D and ready to use in games. They're for sale on itch.io.
 - [Casino de Chambre: Party casino for a room crawl · BergBuilds](https://bergbuilds.dk/en/casino-de-chambre/): Casino de Chambre is a party casino for a room crawl: teams share a phone, scan a QR code and play against the house with chips while a big screen shows the standings live.

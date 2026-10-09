@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://bergbuilds.dk/</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://bergbuilds.dk/arcmode/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://bergbuilds.dk/artkit/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://bergbuilds.dk/asset-packs/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://bergbuilds.dk/casino-de-chambre/</loc><lastmod>2026-10-09</lastmod></url>
@@ -19,6 +20,8 @@
   <url><loc>https://bergbuilds.dk/reppr/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://bergbuilds.dk/theta/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://bergbuilds.dk/zeta/</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://bergbuilds.dk/arcmode/privacy/</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://bergbuilds.dk/en/arcmode/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://bergbuilds.dk/en/artkit/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://bergbuilds.dk/en/asset-packs/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://bergbuilds.dk/en/casino-de-chambre/</loc><lastmod>2026-10-09</lastmod></url>
@@ -46,4 +49,5 @@
   <url><loc>https://bergbuilds.dk/hjemmesider/nyborg/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://bergbuilds.dk/hjemmesider/pizzeria-takeaway-odense/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://bergbuilds.dk/hjemmesider/seo-tjekliste/</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://bergbuilds.dk/en/arcmode/privacy/</loc><lastmod>2026-10-09</lastmod></url>
 </urlset>
