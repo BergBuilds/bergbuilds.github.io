@@ -70,6 +70,7 @@ h2 { font-size:clamp(32px,4vw,48px); font-weight:800; margin-bottom:10px; }
 .sub { color:var(--dim); font-size:17px; max-width:40em; margin-bottom:30px; }
 .sub a, .prose a, .faq a, .crumbs a { color:var(--accent); }
 .prose h2 { font-size:clamp(22px,3vw,28px); margin:38px 0 10px; }  /* privacy policies: sections */
+.prose ul { padding-left:1.25em; margin-top:8px; } .prose li + li { margin-top:6px; }
 
 /* the project grid: tiles pop in one after another with a little tilt, and settle */
 .group + .group { margin-top:44px; }
