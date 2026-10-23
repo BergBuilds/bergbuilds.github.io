@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<script>if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("motion")</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sukker, spinat og en app, der troede, det var i går · BergBuilds</title>
+<meta name="description" content="Fire små historier fra ugen i værkstedet: en animation, der krævede tre forsøg, data, der lød forkert, et ur, der gik i stå, og musik, der ikke var så gratis, som den så ud.">
+<meta property="article:published_time" content="2026-10-23">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/bb.css">
+<link rel="canonical" href="https://bergbuilds.dk/devlog/2026-10-23/">
+<link rel="alternate" hreflang="da" href="https://bergbuilds.dk/devlog/2026-10-23/">
+<link rel="alternate" hreflang="en" href="https://bergbuilds.dk/en/devlog/2026-10-23/">
+<link rel="alternate" hreflang="x-default" href="https://bergbuilds.dk/devlog/2026-10-23/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="BergBuilds">
+<meta property="og:url" content="https://bergbuilds.dk/devlog/2026-10-23/">
+<meta property="og:title" content="Sukker, spinat og en app, der troede, det var i går · BergBuilds">
+<meta property="og:description" content="Fire små historier fra ugen i værkstedet: en animation, der krævede tre forsøg, data, der lød forkert, et ur, der gik i stå, og musik, der ikke var så gratis, som den så ud.">
+<meta property="og:image" content="https://bergbuilds.dk/img/share-hub.png">
+<meta property="og:locale" content="da_DK">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://bergbuilds.dk/devlog/2026-10-23/#webpage", "url": "https://bergbuilds.dk/devlog/2026-10-23/", "name": "Sukker, spinat og en app, der troede, det var i går · BergBuilds", "description": "Fire små historier fra ugen i værkstedet: en animation, der krævede tre forsøg, data, der lød forkert, et ur, der gik i stå, og musik, der ikke var så gratis, som den så ud.", "inLanguage": "da", "isPartOf": {"@id": "https://bergbuilds.dk/#website"}, "about": {"@id": "https://bergbuilds.dk/#bergbuilds"}, "primaryImageOfPage": "https://bergbuilds.dk/img/share-hub.png"}, {"@type": "BlogPosting", "headline": "Sukker, spinat og en app, der troede, det var i går", "description": "Fire små historier fra ugen i værkstedet: en animation, der krævede tre forsøg, data, der lød forkert, et ur, der gik i stå, og musik, der ikke var så gratis, som den så ud.", "url": "https://bergbuilds.dk/devlog/2026-10-23/", "datePublished": "2026-10-23", "inLanguage": "da", "image": "https://bergbuilds.dk/img/share-hub.png", "mainEntityOfPage": {"@id": "https://bergbuilds.dk/devlog/2026-10-23/#webpage"}, "author": {"@type": "Organization", "@id": "https://bergbuilds.dk/#bergbuilds", "name": "BergBuilds"}, "publisher": {"@id": "https://bergbuilds.dk/#bergbuilds"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "BergBuilds", "item": "https://bergbuilds.dk/"}, {"@type": "ListItem", "position": 2, "name": "Devlog", "item": "https://bergbuilds.dk/devlog/"}, {"@type": "ListItem", "position": 3, "name": "Sukker, spinat og en app, der troede, det var i går", "item": "https://bergbuilds.dk/devlog/2026-10-23/"}]}]}</script>
+</head>
+<body style="--c:#f472b6">
+<div class="progress" aria-hidden="true"></div>
+<nav>
+  <div class="wrap">
+    <a class="logo" href="/">Berg<span>Builds</span></a>
+    <div class="links"><a href="/#projekter">Projekter</a><a href="/devlog/">Devlog</a><a href="/hjemmesider/">Hjemmesider</a></div>
+    <div class="navr"><a class="lang" href="/en/devlog/2026-10-23/" hreflang="en" lang="en">EN</a><a class="btn small" href="/hjemmesider/"><span class="lbl-l">Hjemmeside til din virksomhed</span><span class="lbl-s">Hjemmesider</span></a></div>
+  </div>
+</nav>
+
+<header id="top" class="sub-hero">
+  <div class="wrap">
+    <ol class="crumbs" aria-label="breadcrumb"><li><a href="/">BergBuilds</a></li><li><a href="/devlog/">Devlog</a></li><li aria-current="page">Sukker, spinat og en app, der troede, det var i går</li></ol>
+    <h1>Sukker, spinat og en app, der troede, det var i går</h1>
+    <p class="lead">Fire små historier fra ugen i værkstedet: en animation, der krævede tre forsøg, data, der lød forkert, et ur, der gik i stå, og musik, der ikke var så gratis, som den så ud.</p>
+    <p class="sub">23. oktober 2026 · BergBuilds</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <article class="prose" style="padding-top:20px"><h2>Reppr: tre forsøg på at bytte to øvelser</h2><p>I Reppr kan man bytte rundt på øvelserne i en træning, og de to kort skal glide forbi hinanden. Første forsøg brugte Reacts indbyggede layout-animation. Den gør slet ingenting på Androids nye arkitektur. Andet forsøg målte hvert korts højde og flyttede dem i hånden. Bedre, men frame for frame var der én frame til sidst, hvor den gamle rækkefølge blinkede tilbage. Tredje forsøg bygger kortene om på stedet, og nu tager hele byttet omkring en tredjedel af et sekund uden blink.</p><p>Samme dag fik øvelsesbiblioteket 39 nye øvelser, fra Pallof press til shrugs, hver med tre korte teknik-tip.</p><p><b>Tag med:</b> optag skærmen og se den frame for frame. Det, der ser fint ud i fuld fart, kan godt have en fejl, du kun ser i slowmotion.</p><h2>Nibblr: 105 gram sukker i 100 gram sukker</h2><p>Nibblr har over 18.000 fødevarer med. Et tjek af hver eneste række, bare på jagt efter ting, der ikke kan passe, fandt en: almindeligt sukker med 105 gram sukker pr. 100 gram. Det er ikke en tastefejl. Den britiske database tæller sukker som det, det bliver til, når det er fordøjet og har optaget lidt vand. Nu bliver værdierne holdt på højst 100.</p><p>Appen fik også en linje i historikken, der fortæller, hvad du får for lidt af i ugens løb, med tre fødevarer at prøve. Spinat var et oplagt bud på jern. Testen sagde nej: 9 % af dagens jern pr. 100 gram. Seks bud dumpede kravet om mindst 15 % i én normal portion og blev skiftet ud med blandt andet linser, kikærter og quinoa.</p><p><b>Tag med:</b> når data mangler, er ”ukendt” og ”nul” ikke det samme. Og det, alle ved, er værd at tjekke mod tallene.</p><h2>Arcmode: appen, der troede, det stadig var i går</h2><p>Arcmode er en vane-app. Efter en nat i baggrunden viste den stadig gårsdagen som ”i dag”, så morgenens vaner landede på den forkerte dato, og din streak så knækket ud. Rettelsen var ti linjer: tjek datoen igen, når appen kommer frem, og sæt en lille timer til midnat.</p><p>Samme uge et tjek af tilgængeligheden: omkring tres knapper, og nul af dem havde en tekst til skærmlæseren. En blind bruger ville høre ”knap, knap, knap”. Og den svage grå til små tekster gav 3,6 i kontrast mod sort, hvor tommelfingerreglen er 4,5. Den er nu lidt lysere, omkring 5.</p><p><b>Tag med:</b> alt, der afhænger af ”nu”, skal have noget, der vækker det, når ”nu” ændrer sig. Og prøv din app med skærmlæseren slået til én gang.</p><h2>YouTube: et krav er ikke en strike</h2><p>Ud af 12 Shorts havde fire et ophavsretskrav, og ingen af dem var en strike. Et krav betyder, at eventuelle reklamepenge fra videoen går til musikkens ejer. Men én Short blev blokeret i hele verden over et nummer, der stod som gratis. Kunstneren havde registreret sin musik hos YouTube under et andet navn. YouTube Studios ”Erase song” fjernede kun musikken og lod stemmen blive, og videoen kørte igen. Tre af seks ”sikre” numre var aldrig sikre.</p><p><b>Tag med:</b> søg kunstneren op på YouTube, før du bruger et nummer. Har de en automatisk ”Topic”-kanal, er musikken sandsynligvis registreret.</p><p style="margin-top:38px"><a href="/devlog/">Flere indlæg og videoer i devloggen →</a></p></article>
+  <footer>
+    <span>© BergBuilds · Apps, spil og hjemmesider fra Fyn</span>
+    <nav><a href="/">Alle projekter</a><a href="/devlog/">Devlog</a><a href="/hjemmesider/">Hjemmesider</a></nav>
+  </footer>
+</main>
+
+<script src="/motion.js" defer></script>
+</body>
+</html>

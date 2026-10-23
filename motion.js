@@ -27,6 +27,11 @@
   }));
   if (!moving) return;
 
+  // the hero shows at once (fast first paint, nothing waits on this script); everything else hides only from here on (html.mo),
+  // so if this script never runs, the page simply shows
+  document.querySelectorAll('header .fade').forEach((el) => el.classList.remove('fade'));
+  root.classList.add('mo');
+
   // a thin bar along the top that fills as you scroll (Zeta's Progress)
   const bar = document.querySelector('.progress');
   if (bar) {
@@ -42,6 +47,7 @@
 
   // headlines: every word gets its own delay; the gradient keyword stays one piece and lands last
   document.querySelectorAll('h1, h2').forEach((h) => {
+    if (h.closest('header')) return;
     let i = 0;
     const wrap = (text) => {
       const frag = document.createDocumentFragment();
@@ -60,6 +66,7 @@
       if (n.nodeType === 3) n.replaceWith(wrap(n.textContent));
       else if (n.nodeType === 1) { n.classList.add('w'); n.style.setProperty('--i', i++); }
     });
+    if (!h.closest('.fade')) setTimeout(() => h.classList.add('in'), 60);  // no block to wait for: come in right away
   });
 
   // numbers: the real value is in the HTML; start them at 0 and count up when they come into view
@@ -72,7 +79,7 @@
     };
     requestAnimationFrame(step);
   };
-  document.querySelectorAll('[data-to]').forEach((n) => { n.textContent = (n.dataset.prefix || '') + '0' + (n.dataset.suffix || ''); });
+  document.querySelectorAll('[data-to]').forEach((n) => { if (n.closest('header')) return; n.textContent = (n.dataset.prefix || '') + '0' + (n.dataset.suffix || ''); });
 
   // checklists tick off one by one; cards in a row come in one after another
   document.querySelectorAll('.card ul').forEach((ul) => ul.querySelectorAll('li').forEach((li, i) => li.style.setProperty('--i', i)));

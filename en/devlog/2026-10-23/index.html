@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("motion")</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sugar, spinach and an app that thought it was yesterday · BergBuilds</title>
+<meta name="description" content="Four small stories from the workshop this week: an animation that took three tries, data that looked wrong, a clock that stood still, and music that wasn&#x27;t as free as it looked.">
+<meta property="article:published_time" content="2026-10-23">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/bb.css">
+<link rel="canonical" href="https://bergbuilds.dk/en/devlog/2026-10-23/">
+<link rel="alternate" hreflang="da" href="https://bergbuilds.dk/devlog/2026-10-23/">
+<link rel="alternate" hreflang="en" href="https://bergbuilds.dk/en/devlog/2026-10-23/">
+<link rel="alternate" hreflang="x-default" href="https://bergbuilds.dk/devlog/2026-10-23/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="BergBuilds">
+<meta property="og:url" content="https://bergbuilds.dk/en/devlog/2026-10-23/">
+<meta property="og:title" content="Sugar, spinach and an app that thought it was yesterday · BergBuilds">
+<meta property="og:description" content="Four small stories from the workshop this week: an animation that took three tries, data that looked wrong, a clock that stood still, and music that wasn&#x27;t as free as it looked.">
+<meta property="og:image" content="https://bergbuilds.dk/img/share-hub-en.png">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://bergbuilds.dk/en/devlog/2026-10-23/#webpage", "url": "https://bergbuilds.dk/en/devlog/2026-10-23/", "name": "Sugar, spinach and an app that thought it was yesterday · BergBuilds", "description": "Four small stories from the workshop this week: an animation that took three tries, data that looked wrong, a clock that stood still, and music that wasn't as free as it looked.", "inLanguage": "en", "isPartOf": {"@id": "https://bergbuilds.dk/#website"}, "about": {"@id": "https://bergbuilds.dk/#bergbuilds"}, "primaryImageOfPage": "https://bergbuilds.dk/img/share-hub-en.png"}, {"@type": "BlogPosting", "headline": "Sugar, spinach and an app that thought it was yesterday", "description": "Four small stories from the workshop this week: an animation that took three tries, data that looked wrong, a clock that stood still, and music that wasn't as free as it looked.", "url": "https://bergbuilds.dk/en/devlog/2026-10-23/", "datePublished": "2026-10-23", "inLanguage": "en", "image": "https://bergbuilds.dk/img/share-hub-en.png", "mainEntityOfPage": {"@id": "https://bergbuilds.dk/en/devlog/2026-10-23/#webpage"}, "author": {"@type": "Organization", "@id": "https://bergbuilds.dk/#bergbuilds", "name": "BergBuilds"}, "publisher": {"@id": "https://bergbuilds.dk/#bergbuilds"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "BergBuilds", "item": "https://bergbuilds.dk/en/"}, {"@type": "ListItem", "position": 2, "name": "Devlog", "item": "https://bergbuilds.dk/en/devlog/"}, {"@type": "ListItem", "position": 3, "name": "Sugar, spinach and an app that thought it was yesterday", "item": "https://bergbuilds.dk/en/devlog/2026-10-23/"}]}]}</script>
+</head>
+<body style="--c:#f472b6">
+<div class="progress" aria-hidden="true"></div>
+<nav>
+  <div class="wrap">
+    <a class="logo" href="/en/">Berg<span>Builds</span></a>
+    <div class="links"><a href="/en/#projekter">Projects</a><a href="/en/devlog/">Devlog</a><a href="/en/websites/">Websites</a></div>
+    <div class="navr"><a class="lang" href="/devlog/2026-10-23/" hreflang="da" lang="da">DA</a><a class="btn small" href="/en/websites/"><span class="lbl-l">A website for your business</span><span class="lbl-s">Websites</span></a></div>
+  </div>
+</nav>
+
+<header id="top" class="sub-hero">
+  <div class="wrap">
+    <ol class="crumbs" aria-label="breadcrumb"><li><a href="/en/">BergBuilds</a></li><li><a href="/en/devlog/">Devlog</a></li><li aria-current="page">Sugar, spinach and an app that thought it was yesterday</li></ol>
+    <h1>Sugar, spinach and an app that thought it was yesterday</h1>
+    <p class="lead">Four small stories from the workshop this week: an animation that took three tries, data that looked wrong, a clock that stood still, and music that wasn&#x27;t as free as it looked.</p>
+    <p class="sub">23 October 2026 · BergBuilds</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <article class="prose" style="padding-top:20px"><h2>Reppr: three tries at swapping two exercises</h2><p>In Reppr you can swap exercises around in a workout, and the two cards should slide past each other. Try one used React's built-in layout animation. It does nothing at all on Android's new architecture. Try two measured each card's height and moved them by hand. Better, but frame by frame there was one frame at the end where the old order flashed back. Try three rebuilds the cards in place, and the whole swap now takes about a third of a second, with no flash.</p><p>The same day the exercise library grew by 39, from the Pallof press to shrugs, each with three short form cues.</p><p><b>Take this with you:</b> record the screen and step through it frame by frame. Something that looks fine at full speed can hide a bug you only see in slow motion.</p><h2>Nibblr: 105 grams of sugar in 100 grams of sugar</h2><p>Nibblr ships with over 18,000 foods. A check of every row, just looking for things that can't be true, found one: table sugar with 105 grams of sugar per 100 grams. It's not a typo. The British database counts sugar as what it becomes once it's digested and has picked up a little water. Values are now capped at 100.</p><p>The app also got a line in its history that says what you're running low on this week, with three foods to try. Spinach was the obvious pick for iron. The test said no: 9% of your daily iron per 100 grams. Six picks failed the rule of at least 15% in one normal portion and were swapped for foods like lentils, chickpeas and quinoa.</p><p><b>Take this with you:</b> when data is missing, "unknown" and "zero" are not the same thing. And what everybody knows is worth checking against the numbers.</p><h2>Arcmode: the app that thought it was still yesterday</h2><p>Arcmode is a habit app. After a night in the background it still showed yesterday as "today", so the morning's habits landed on the wrong date and your streak looked broken. The fix was ten lines: check the date again when the app comes to the front, and set a small timer for midnight.</p><p>The same week, an accessibility check: about sixty buttons, and zero of them had a label for the screen reader. A blind user would hear "button, button, button". And the faint grey used for small text scored 3.6 in contrast against black, where the rule of thumb is 4.5. It's a little lighter now, about 5.</p><p><b>Take this with you:</b> anything that depends on "now" needs something that wakes it up when "now" changes. And try your app with the screen reader on, once.</p><h2>YouTube: a claim is not a strike</h2><p>Out of 12 Shorts, four had a copyright claim, and none of them was a strike. A claim means any ad money from the video goes to the music's owner. But one Short was blocked worldwide over a track that was labelled free. The artist had registered their music with YouTube under another name. YouTube Studio's "Erase song" removed only the music and kept the voice, and the video played again. Three of six "safe" tracks were never safe.</p><p><b>Take this with you:</b> look the artist up on YouTube before you use a track. If they have an auto-generated "Topic" channel, the music is most likely registered.</p><p style="margin-top:38px"><a href="/en/devlog/">More posts and videos in the devlog →</a></p></article>
+  <footer>
+    <span>© BergBuilds · Apps, games and websites from Denmark</span>
+    <nav><a href="/en/">All projects</a><a href="/en/devlog/">Devlog</a><a href="/en/websites/">Websites</a></nav>
+  </footer>
+</main>
+
+<script src="/motion.js" defer></script>
+</body>
+</html>

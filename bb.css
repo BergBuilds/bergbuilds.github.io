@@ -30,6 +30,7 @@ nav .wrap { display:flex; justify-content:space-between; align-items:center; hei
 .btn.small { padding:9px 16px; font-size:14px; }
 .btn.yt { background:#ff2d2d; } .btn.ig { background:linear-gradient(135deg,#f58529,#dd2a7b 55%,#8134af); }
 .cta-row { display:flex; gap:12px; flex-wrap:wrap; }
+.cta-note { color:var(--dim); font-size:13px; margin-top:12px; max-width:30em; }
 
 /* hero */
 header { position:relative; padding:70px 0 40px; overflow:hidden; }
@@ -44,7 +45,7 @@ header { position:relative; padding:70px 0 40px; overflow:hidden; }
 h1 { font-size:clamp(44px,6.4vw,80px); font-weight:800; }
 .grad { position:relative; white-space:nowrap; color:var(--accent); }
 .grad::after { content:""; position:absolute; left:-2%; right:-2%; bottom:.04em; height:.28em; z-index:-1; border-radius:6px; background:#ffe066; transform-origin:0 50%; transition:transform .9s var(--out) .9s; }
-.motion .grad::after { transform:scaleX(0); } .motion .in .grad::after { transform:none; }
+.mo .grad::after { transform:scaleX(0); } .mo .in .grad::after { transform:none; }
 .lead { color:var(--dim); font-size:19px; margin:22px 0 30px; max-width:33em; }
 
 /* the avatar as a slightly tilted photo with stickers */
@@ -146,18 +147,18 @@ footer nav { position:static; background:none; border:0; backdrop-filter:none; d
 
 .progress { position:fixed; top:0; left:0; height:4px; width:100%; z-index:50; transform-origin:0 50%; transform:scaleX(var(--p,0)); background:linear-gradient(90deg,#6d5cff,#ff6b9d,#ffb020); pointer-events:none; }
 
-/* motion (only with html.motion; without JS or with reduced motion everything simply shows) */
-.motion .fade { opacity:0; transform:translateY(30px); transition:opacity .7s var(--out), transform .8s var(--out); transition-delay:calc(var(--d,0) * 90ms); }
-.motion .fade.in { opacity:1; transform:none; }
-.motion .tiles .tile.fade, .motion .shorts.fade .short, .motion .more .fade { transition:opacity .5s var(--out), transform .8s var(--spring); }
-.motion .tiles .tile.fade { transform:translateY(46px) rotate(-4deg) scale(.92); }
-.motion .tiles .tile.fade:nth-child(even) { transform:translateY(46px) rotate(4deg) scale(.92); }
-.motion .tiles .tile.fade.in { transform:none; }
-.motion .tiles .tile.fade.in:hover { transform:translateY(-8px) rotate(-1.2deg); }
-.motion .w { position:relative; top:.4em; opacity:0; transition:opacity .5s var(--out), top .7s var(--spring); transition-delay:calc(var(--i) * 70ms + 100ms); }
-.motion .in .w { top:0; opacity:1; }
-.motion .card li { opacity:0; left:-10px; transition:opacity .4s, left .5s var(--spring); transition-delay:calc(var(--i,0) * 90ms + 300ms); }
-.motion .in li { opacity:1; left:0; }
+/* motion (only with html.mo, set by motion.js; without JS or with reduced motion everything simply shows) */
+.mo .fade { opacity:0; transform:translateY(30px); transition:opacity .7s var(--out), transform .8s var(--out); transition-delay:calc(var(--d,0) * 90ms); }
+.mo .fade.in { opacity:1; transform:none; }
+.mo .tiles .tile.fade, .mo .shorts.fade .short, .mo .more .fade { transition:opacity .5s var(--out), transform .8s var(--spring); }
+.mo .tiles .tile.fade { transform:translateY(46px) rotate(-4deg) scale(.92); }
+.mo .tiles .tile.fade:nth-child(even) { transform:translateY(46px) rotate(4deg) scale(.92); }
+.mo .tiles .tile.fade.in { transform:none; }
+.mo .tiles .tile.fade.in:hover { transform:translateY(-8px) rotate(-1.2deg); }
+.mo .w { position:relative; top:.4em; opacity:0; transition:opacity .5s var(--out), top .7s var(--spring); transition-delay:calc(var(--i) * 70ms + 100ms); }
+.mo .in .w { top:0; opacity:1; }
+.mo .card li { opacity:0; left:-10px; transition:opacity .4s, left .5s var(--spring); transition-delay:calc(var(--i,0) * 90ms + 300ms); }
+.mo .in li { opacity:1; left:0; }
 /* the hero's "specks" (motion.js) become slow floating confetti here */
 .specks { position:absolute; inset:0; z-index:-1; overflow:hidden; pointer-events:none; }
 .specks i { position:absolute; bottom:-14px; width:calc(var(--s) * 3); height:calc(var(--s) * 3); border-radius:50%; opacity:calc(var(--o) * .9); animation:rise var(--t) linear infinite; }
