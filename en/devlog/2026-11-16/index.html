@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("motion")</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>An auto clicker behind a locked screen and a stock split that looked like a crash · BergBuilds</title>
+<meta name="description" content="Four small stories from the workshop: a clicker that wasn&#x27;t allowed to click, a clock change that ate a weigh-in, a muscle called “Shoul…”, and an 86% drop that never happened.">
+<meta property="article:published_time" content="2026-11-16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/bb.css">
+<link rel="canonical" href="https://bergbuilds.dk/en/devlog/2026-11-16/">
+<link rel="alternate" hreflang="da" href="https://bergbuilds.dk/devlog/2026-11-16/">
+<link rel="alternate" hreflang="en" href="https://bergbuilds.dk/en/devlog/2026-11-16/">
+<link rel="alternate" hreflang="x-default" href="https://bergbuilds.dk/devlog/2026-11-16/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="BergBuilds">
+<meta property="og:url" content="https://bergbuilds.dk/en/devlog/2026-11-16/">
+<meta property="og:title" content="An auto clicker behind a locked screen and a stock split that looked like a crash · BergBuilds">
+<meta property="og:description" content="Four small stories from the workshop: a clicker that wasn&#x27;t allowed to click, a clock change that ate a weigh-in, a muscle called “Shoul…”, and an 86% drop that never happened.">
+<meta property="og:image" content="https://bergbuilds.dk/img/share/devlog-2026-11-16-en.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://bergbuilds.dk/en/devlog/2026-11-16/#webpage", "url": "https://bergbuilds.dk/en/devlog/2026-11-16/", "name": "An auto clicker behind a locked screen and a stock split that looked like a crash · BergBuilds", "description": "Four small stories from the workshop: a clicker that wasn't allowed to click, a clock change that ate a weigh-in, a muscle called “Shoul…”, and an 86% drop that never happened.", "inLanguage": "en", "isPartOf": {"@id": "https://bergbuilds.dk/#website"}, "about": {"@id": "https://bergbuilds.dk/#bergbuilds"}, "primaryImageOfPage": "https://bergbuilds.dk/img/share/devlog-2026-11-16-en.jpg"}, {"@type": "BlogPosting", "headline": "An auto clicker behind a locked screen and a stock split that looked like a crash", "description": "Four small stories from the workshop: a clicker that wasn't allowed to click, a clock change that ate a weigh-in, a muscle called “Shoul…”, and an 86% drop that never happened.", "url": "https://bergbuilds.dk/en/devlog/2026-11-16/", "datePublished": "2026-11-16", "inLanguage": "en", "image": "https://bergbuilds.dk/img/share/devlog-2026-11-16-en.jpg", "mainEntityOfPage": {"@id": "https://bergbuilds.dk/en/devlog/2026-11-16/#webpage"}, "author": {"@type": "Organization", "@id": "https://bergbuilds.dk/#bergbuilds", "name": "BergBuilds"}, "publisher": {"@id": "https://bergbuilds.dk/#bergbuilds"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "BergBuilds", "item": "https://bergbuilds.dk/en/"}, {"@type": "ListItem", "position": 2, "name": "Devlog", "item": "https://bergbuilds.dk/en/devlog/"}, {"@type": "ListItem", "position": 3, "name": "An auto clicker behind a locked screen and a stock split that looked like a crash", "item": "https://bergbuilds.dk/en/devlog/2026-11-16/"}]}]}</script>
+<link rel="alternate" type="application/atom+xml" title="BergBuilds devlog" href="https://bergbuilds.dk/en/devlog/feed.xml">
+</head>
+<body style="--c:#f472b6">
+<div class="progress" aria-hidden="true"></div>
+<nav>
+  <div class="wrap">
+    <a class="logo" href="/en/">Berg<span>Builds</span></a>
+    <div class="links"><a href="/en/#projekter">Projects</a><a href="/en/devlog/">Devlog</a><a href="/en/websites/">Websites</a></div>
+    <div class="navr"><a class="lang" href="/devlog/2026-11-16/" hreflang="da" lang="da">DA</a><a class="btn small" href="/en/websites/"><span class="lbl-l">A website for your business</span><span class="lbl-s">Websites</span></a></div>
+  </div>
+</nav>
+
+<header id="top" class="sub-hero">
+  <div class="wrap">
+    <ol class="crumbs" aria-label="breadcrumb"><li><a href="/en/">BergBuilds</a></li><li><a href="/en/devlog/">Devlog</a></li><li aria-current="page">An auto clicker behind a locked screen and a stock split that looked like a crash</li></ol>
+    <h1>An auto clicker behind a locked screen and a stock split that looked like a crash</h1>
+    <p class="lead">Four small stories from the workshop: a clicker that wasn&#x27;t allowed to click, a clock change that ate a weigh-in, a muscle called “Shoul…”, and an 86% drop that never happened.</p>
+    <p class="sub">16 November 2026 · BergBuilds</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <article class="prose" style="padding-top:20px"><h2>Pi: an auto clicker that wasn&#x27;t allowed to click</h2><p>Pi is an auto clicker for Windows that does more than click: it runs whole sequences of clicks, key presses, text and waits. The first version was built in a morning, and a day later it was at version 2.1, with recording, loops, “wait for a window” and over 120 automated tests.</p><p>The catch: the screen was locked the whole time, and Windows refuses simulated clicks on a locked screen. So the one thing an auto clicker exists for, real clicks, was the one thing that couldn't be tried. Everything else was tested with a fake window and a fake mouse, without a single window popping up.</p><p><b>Take away:</b> if you can't test the real thing yet, build it so a fake mouse can test it today, and try the real clicks as soon as you can.</p><h2>Nibblr: the clock change that ate a weigh-in</h2><p>Nibblr can now answer the question everyone who weighs in asks: when do I reach my goal? It draws a straight line through the last four weeks of weigh-ins and gives a date. If the line points the wrong way, it says so plainly instead of promising anything.</p><p>The first test failed for a sneaky reason. The clocks went back in October, so “28 days ago” landed an hour after midnight and quietly dropped a weigh-in. Counting whole days instead of hours fixed it.</p><p><b>Take away:</b> count in whole days when you mean days. A day isn't always 24 hours.</p><h2>Reppr: ten to twenty sets, and a muscle called “Shoul…”</h2><p>Most studies on muscle growth land on roughly the same number: ten to twenty hard sets per muscle a week. Reppr already knew every set you ticked, so the stats now have a card with one bar per muscle group, the 10-20 band shaded, and a line naming the groups that fell short.</p><p>On the phone, “Shoulders” got cut to “Shoul…”, which no test would ever have caught. The same evening the app was tried with all text at double size, and the set rows ran off the edge. Now the boxes can shrink.</p><p><b>Take away:</b> look at your app with large text turned on. Plenty of people use it, and that's where layouts break.</p><h2>Greed: an 86% drop that never happened</h2><p>Greed is a lab that tests stock strategies with pretend money. Fresh eyes on the code found a bug that hadn't bitten yet: the bot only knew stock splits from a fixed list (2-for-1, 3-for-1, 10-for-1). Apple's 7-for-1 split in 2014 wasn't on it. Had that happened to a holding, the price would drop to a seventh overnight while the share count stayed put: a fake 86% loss. Now any whole-number ratio counts.</p><p>The backtester also had a quiet freebie: it assumed the portfolio was rebalanced every single day at no cost. Letting the weights drift, as in a real account, took about half a percent a year off every strategy.</p><p><b>Take away:</b> when a backtest looks too good, look for what it gets for free. And this is an experiment, not investment advice.</p><nav class="postnav" aria-label="More posts"><a class="older" href="/en/devlog/2026-10-23/" rel="prev"><small>← Older</small>Sugar, spinach and an app that thought it was yesterday</a><a class="newer" href="/en/devlog/2026-11-21/" rel="next"><small>Newer →</small>A macro that stopped itself and an 800 kg squat</a></nav><p style="margin-top:38px"><a href="/en/devlog/">More posts and videos in the devlog →</a></p></article>
+  <footer>
+    <span>© BergBuilds · Apps, games and websites from Denmark</span>
+    <nav><a href="/en/">All projects</a><a href="/en/devlog/">Devlog</a><a href="/en/websites/">Websites</a></nav>
+  </footer>
+</main>
+
+<script src="/motion.js" defer></script>
+</body>
+</html>

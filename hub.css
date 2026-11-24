@@ -1,0 +1,45 @@
+/* The hub (front page): plain engineering portfolio. Project pages use bb.css. */
+* { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body { font:17px/1.6 "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; color:#1d2327; background:#fff; }
+img { display:block; max-width:100%; }
+a { color:#134f7c; text-underline-offset:3px; }
+.wrap { max-width:920px; margin:0 auto; padding:0 24px; }
+header { border-bottom:1px solid #dfe3e6; }
+.bar { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:4px 24px; padding-top:14px; padding-bottom:14px; }
+.logo { font-weight:700; font-size:19px; color:inherit; text-decoration:none; }
+nav { display:flex; flex-wrap:wrap; gap:0 20px; font-size:15px; }
+nav a { color:#4b555c; text-decoration:none; padding:6px 0; }
+nav a:hover { color:#134f7c; text-decoration:underline; }
+h1, h2, h3 { line-height:1.2; letter-spacing:-.01em; }
+h1 { font-size:clamp(32px,5vw,46px); max-width:18em; }
+h2 { font-size:25px; margin-bottom:14px; }
+h3 { font-size:20px; margin:2px 0 6px; }
+section { padding:48px 0; border-top:1px solid #dfe3e6; scroll-margin-top:12px; }
+.intro { border:0; padding:72px 0 56px; }
+.lead { font-size:20px; color:#4b555c; max-width:36em; margin:18px 0 24px; }
+.sub { max-width:40em; color:#3b454c; }
+.act { display:flex; flex-wrap:wrap; gap:8px 26px; }
+dl { margin-top:22px; }
+dl div { display:grid; grid-template-columns:160px 1fr; gap:16px; padding:11px 0; border-top:1px solid #eceff1; }
+dt { font-weight:600; }
+.work { display:grid; grid-template-columns:260px 1fr; gap:28px; padding:22px 0; color:inherit; text-decoration:none; border-top:1px solid #eceff1; align-items:center; }
+.work:hover h3 { color:#134f7c; text-decoration:underline; }
+.wimg { height:170px; background:#f1f3f4; overflow:hidden; }
+.wimg img { width:100%; height:100%; object-fit:cover; object-position:top; }
+.wimg.ph img { width:auto; margin:0 auto; object-fit:contain; }
+.meta { font-size:14px; color:#66717a; }
+.all { border-top:1px solid #eceff1; padding-top:18px; }
+.all summary { cursor:pointer; font-weight:600; color:#134f7c; }
+.group { margin-top:22px; }
+.gh { font-size:16px; margin-bottom:4px; }
+.tiles { display:grid; grid-template-columns:1fr 1fr; gap:0 28px; }
+.tile { color:inherit; text-decoration:none; padding:8px 0; border-bottom:1px solid #eceff1; }
+.tile:hover h3 { text-decoration:underline; }
+.tile .pic, .tile .st { display:none; }
+.tile h3 { font-size:16px; margin:0; }
+.tile p { font-size:14px; color:#66717a; }
+footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; padding:26px 0 40px; border-top:1px solid #dfe3e6; font-size:15px; color:#66717a; }
+a:focus-visible, summary:focus-visible { outline:3px solid #134f7c; outline-offset:3px; }
+@media (max-width:640px) { .work, dl div, .tiles { grid-template-columns:1fr; } dl div { gap:0; } .work { gap:14px; } .intro { padding:44px 0 36px; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
